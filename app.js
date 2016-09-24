@@ -57,18 +57,15 @@ example and use the values that were input into the function:
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
 
-IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. To do addition, use your sum() function, and to do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this.
+IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. To do addition,
+ use your sum() function, and to do multiplication, use your multiply() function that you've already created.
+ You're going to have to be resourceful to figure out how to do this.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-  var sum = a + b + c;
-  var multiply = a * b * c;
-  var messageSum = '4 and 7 and 5 sum to ' + sum + '.';
-  var messageMultiply = 'The product of 4 and 7 and 5 is ' + multiply + '.';
-  var output = [sum, multiply, messageSum, messageMultiply];
-  return output;
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -96,13 +93,13 @@ uncomment the call for the testSumArray() function and see if the test passes.*/
 // Write your code here
 var testArray = [2,3,4]; //eslint-disable-line
 
-function sumArray(testArray){
-  var total = 0; //eslint-disable-line
-  for(var i = 0 ; i < testArray.length; i++){
-    total += testArray[i];
-  }
-  return [total, '2,3,4 was passed in as an array of numbers, and ' + total + ' is their sum.'];
+function sumArray(testArray){   //eslint-disable-line
+
 }
+
+
+  //return [total, '2,3,4 was passed in as an array of numbers, and ' + total + ' is their sum.'];
+
 // Here is the test for sumArray(); uncomment it to run it
 
 testSumArray(testArray);
@@ -127,13 +124,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-  var total = 1;
-  for(var i = 0 ; i < testArray.length ; i++){
-    total = testArray[i] * total;
-  }
-  return [total,'The numbers 2,3,4 have a product of ' + total + '.'];
-}
 
+}
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(2,3,4);
 
