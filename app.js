@@ -148,9 +148,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+  var total = 1; //eslint-disable-line
+  for(var i = 0 ; i < testArray.length; i++){
+    total = multiply(total ,testArray[i])[0];
+  }
+  var message = [total, 'The numbers 2,3,4 have a product of ' + total + '.'];
+  return message;
 }
 // Here is the test for multiplyArray(); uncomment it to run it
-//testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
