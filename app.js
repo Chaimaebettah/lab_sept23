@@ -101,7 +101,24 @@ uncomment the call for the testSumArray() function and see if the test passes.*/
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){   //eslint-disable-line
+//this is a way to do it.
+  // var a = testArray[0];
+  // var b = testArray[1];
+  // var c = testArray[2];
+  // var outputofSumAB = sum(a,b)[0];
+  // console.log(outputofSumAB);
+  // var arrOfSum = sum(outputofSumAB, c)[0];
+  // var message = '2,3,4 was passed in as an array of numbers, and ' + arrOfSum + ' is their sum.';
+  // var output = [arrOfSum, message];
+  // return output;
 
+//this is another way to do it.
+var total = 0; //eslint-disable-line
+  for(var i = 0 ; i < testArray.length; i++){
+    total = sum(total ,testArray[i])[0];
+  }
+  var message = [total, '2,3,4 was passed in as an array of numbers, and ' + total + ' is their sum.'];
+  return message;
 }
 
 
@@ -109,7 +126,7 @@ function sumArray(testArray){   //eslint-disable-line
 
 // Here is the test for sumArray(); uncomment it to run it
 
-//testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code
 // between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
